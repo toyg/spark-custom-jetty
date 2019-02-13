@@ -1,4 +1,21 @@
 
+/*
+ * Copyright 2019 Giacomo Lacava
+ *
+ *    Licensed under the Apache License, Version 2.0 (the "License");
+ *    you may not use this file except in compliance with the License.
+ *    You may obtain a copy of the License at
+ *
+ *        http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *    Unless required by applicable law or agreed to in writing, software
+ *    distributed under the License is distributed on an "AS IS" BASIS,
+ *    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *    See the License for the specific language governing permissions and
+ *    limitations under the License.
+ *
+ */
+
 package com.autoepm.sparktips.customjetty;
 
 import org.eclipse.jetty.server.*;
@@ -11,7 +28,9 @@ import spark.utils.Assert;
 
 import java.util.concurrent.TimeUnit;
 
-/** ServerConnector factory, where you can tweak ssl parameters etc */
+/**
+ * ServerConnector factory, where you can tweak ssl parameters etc
+ */
 public class MyCustomSocketConnectorFactory extends SocketConnectorFactory {
     private final static Logger logger = LoggerFactory.getLogger(MyCustomSocketConnectorFactory.class);
 
@@ -26,6 +45,7 @@ public class MyCustomSocketConnectorFactory extends SocketConnectorFactory {
         /* ********* CUSTOMIZATION POINT ***************
          * If you need any extra option on your regular connector, this is where to add it
          */
+        logger.info("HEY MY CUSTOM THINGY WORKS!! come say thanks at https://www.linkedin.com/in/glacava/");
 
         return connector;
     }
@@ -75,6 +95,9 @@ public class MyCustomSocketConnectorFactory extends SocketConnectorFactory {
         HttpConnectionFactory httpConnectionFactory = createHttpConnectionFactory();
         ServerConnector connector = new ServerConnector(server, sslContextFactory, httpConnectionFactory);
         initializeConnector(connector, host, port);
+
+        logger.info("HEY MY CUSTOM THINGY WORKS!! come say thanks at https://www.linkedin.com/in/glacava/");
+
         return connector;
     }
 
