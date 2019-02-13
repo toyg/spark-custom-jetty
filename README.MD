@@ -2,7 +2,7 @@ Custom Jetty instance for Spark
 =====================
 
 
-This repository shows a basic __example__ of how the Jetty instance embedded in Spark can be customized.
+This repository shows a basic __example__ of how the Jetty instance embedded in [Spark](http://sparkjava.com) can be customized.
 You can lift most of this code as-is. It works as of version 2.8.0, and
 I expect it should work with 2.7.x too but I didn't test it. I explained some of the theory behind this effort
 [on my blog](http://blog.pythonaro.com/2019/02/how-to-customise-jetty-embedded-in.html).
