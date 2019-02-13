@@ -26,4 +26,7 @@ Credits
 ======
 (c) 2019 Giacomo Lacava. Licensed under the Apache License, Version 2.0.
 
+Contains quite a bit of code from Spark, which is (c) 2019 Per Wendel, 
+used under the terms of the Apache License, Version 2.0.
+
 Pull requests and corrections are welcome.
